@@ -3,8 +3,6 @@ package com.dc.formReSubmit.Controller;
 import com.dc.formReSubmit.lock.MyLock;
 import com.dc.formReSubmit.pojo.User;
 import com.dc.formReSubmit.service.UserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
