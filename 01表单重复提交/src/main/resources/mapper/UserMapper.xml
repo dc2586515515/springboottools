@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dc.formReSubmit.mapper.UserMapper">
+    <insert id="addUser" parameterType="com.dc.formReSubmit.pojo.User">
+        insert into
+        springboottools.user(user_name,password)
+         values (
+          #{vo.userName},
+          #{vo.password}
+        )
+    </insert>
+</mapper>
