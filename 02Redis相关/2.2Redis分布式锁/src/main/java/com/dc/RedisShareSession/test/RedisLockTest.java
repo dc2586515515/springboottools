@@ -11,7 +11,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 /**
- * @Description
+ * @Description 可能会出现锁超时，多个线程同时获得锁，导致脏数据
  * @Author DC
  * @Date 2020-04-16
  */
@@ -23,11 +23,11 @@ public class RedisLockTest {
 
     String redisKey = "demo-RedisLockTest-isRun";
 
-    //单位为秒  默认30s
-    private long redis_default_expire_time = 30 * 1;
+    //单位为秒  默认15s
+    private long redis_default_expire_time = 15 * 1;
 
-    //每隔10s执行一次
-    @Scheduled(cron = "*/10 * * * * ?")
+    //每隔30s执行一次
+    @Scheduled(cron = "*/30 * * * * ?")
     public void init() throws InterruptedException {
         //-------------上分布式锁开始-----------------
         InetAddress addr = null;
@@ -55,6 +55,8 @@ public class RedisLockTest {
             ip = (String) redisUtils.get(redisKey);
             logger.info("============{}机器上占用分布式锁，聚类任务正在执行=======================", ip);
             logger.info("============本次聚类定时任务结束==============");
+
+            // 本次执行任务已经有人继续执行，所以此线程不再执行，等到下次定时时间再去竞争锁
             return;
         }
     }

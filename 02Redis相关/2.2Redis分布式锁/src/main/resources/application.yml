@@ -1,11 +1,11 @@
 server:
   servlet:
     context-path: /redis-lock
-  port: 8099
+  port: 8082
 spring:
   redis:
   # 找一台多节点都可以访问的服务器部署redis
-    host: xx.xx.xx.xx
+    host: localhost
     port: 6379
     password:
     lettuce:
