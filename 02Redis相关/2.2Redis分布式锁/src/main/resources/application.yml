@@ -1,0 +1,14 @@
+server:
+  servlet:
+    context-path: /redis-lock
+  port: 8099
+spring:
+  redis:
+    host: 172.10.8.6
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+    database: 10
