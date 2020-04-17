@@ -1,7 +1,7 @@
 server:
   servlet:
     context-path: /redis-lock
-  port: 8081
+  port: 8082
 spring:
   redis:
   # 找一台多节点都可以访问的服务器部署redis

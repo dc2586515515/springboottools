@@ -31,6 +31,7 @@ public class RedisUtils {
      */
     public boolean tryLock(String key, Object value, long timeout) {
         //底层原理就是Redis的setnx方法
+        //reditTemplate保存键值对会将key value都进行系列化，所以直接在命令中get key是获取不到值的
         boolean isSuccess = redisTemplate.opsForValue().setIfAbsent(key, value);
         if (isSuccess) {
             //设置分布式锁的过期时间
@@ -40,7 +41,7 @@ public class RedisUtils {
     }
 
     /**
-     * 普通缓存获取
+     * 普通缓存获取 ，获取锁
      *
      * @param key 键
      * @return 值
@@ -58,6 +59,11 @@ public class RedisUtils {
         return obj;
     }
 
+    /**
+     * 删除锁
+     *
+     * @param key
+     */
     public void del(String... key) {
         if (key != null && key.length > 0) {
             if (key.length == 1) {
