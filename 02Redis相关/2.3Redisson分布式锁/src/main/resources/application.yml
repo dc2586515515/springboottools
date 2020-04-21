@@ -3,13 +3,10 @@ server:
     context-path: /redis-lock
   port: 8082
 spring:
+  # redis
   redis:
-  # 找一台多节点都可以访问的服务器部署redis
-    host: localhost
+    host: 127.0.0.1
     port: 6379
-    password:
-    lettuce:
-      pool:
-        max-active: 8
-        max-idle: 8
-    database: 10
+    redisson:
+      # 配置单点模式
+      config: classpath:redisson-single-dev.yml
