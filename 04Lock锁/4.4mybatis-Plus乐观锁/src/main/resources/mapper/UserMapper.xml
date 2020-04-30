@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dc.optimisticLocking.mapper.UserMapper">
+    <update id="myUpdateById" parameterType="com.dc.optimisticLocking.entity.User">
+        update user set
+        <if test="vo.name != null and vo.name != ''">
+            name = #{vo.name},
+        </if>
+        <if test="vo.age != null and vo.age != ''">
+            age = #{vo.age},
+        </if>
+        <if test="vo.email != null and vo.email != ''">
+            email = #{vo.email},
+        </if>
+        version = #{vo.version} + 1
+        where id = #{vo.id} and version =#{vo.version}
+    </update>
+</mapper>

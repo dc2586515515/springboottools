@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///test?serverTimezone=UTC
+    username: root
+    password: dc01
+    initialization-mode: always  #不加的话不会执行schema和data
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+server:
+  port: 8080
