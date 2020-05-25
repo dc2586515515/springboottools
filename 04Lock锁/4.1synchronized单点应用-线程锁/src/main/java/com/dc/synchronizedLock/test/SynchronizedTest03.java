@@ -18,7 +18,7 @@ public class SynchronizedTest03 {
     }
 
     // public synchronized void method2() {
-    public  void method2() {
+    public void method2() {
         System.out.println("Method 2 start");
         try {
             System.out.println("Method 2 execute");
@@ -39,6 +39,7 @@ public class SynchronizedTest03 {
     }
 
     /**
-     *  当线程1还在执行时，线程2也执行了，所以当其他线程来访问 非 synchronized修饰的方法时是可以访问的
+     *  当线程1还在执行时，线程2也执行了，
+     *  因为其他线程来访问 非 synchronized 修饰的方法时是可以访问的
      */
 }

@@ -14,18 +14,18 @@ public class SynchronizedTest04 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println(Thread.currentThread().getName() +" ：Method 1 end");
+        System.out.println(Thread.currentThread().getName() + " ：Method 1 end");
     }
 
     public synchronized void method2() {
-        System.out.println(Thread.currentThread().getName() +" ：Method 2 start");
+        System.out.println(Thread.currentThread().getName() + " ：Method 2 start");
         try {
             System.out.println(Thread.currentThread().getName() + " ：Method 2 execute");
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println(Thread.currentThread().getName() +" ：Method 2 end");
+        System.out.println(Thread.currentThread().getName() + " ：Method 2 end");
     }
 
 

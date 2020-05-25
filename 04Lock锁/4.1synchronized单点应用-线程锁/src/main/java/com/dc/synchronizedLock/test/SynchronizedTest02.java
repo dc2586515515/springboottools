@@ -18,7 +18,7 @@ public class SynchronizedTest02 {
     }
 
     public synchronized void method2() {
-    // public  void method2() {
+        // public  void method2() {
         System.out.println("Method 2 start");
         try {
             System.out.println("Method 2 execute");

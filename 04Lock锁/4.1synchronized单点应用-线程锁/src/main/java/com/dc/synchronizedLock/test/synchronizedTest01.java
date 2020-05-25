@@ -11,27 +11,29 @@ public class synchronizedTest01 implements Runnable {
     /**
      * synchronized 修饰实例方法
      */
-    public synchronized void increase() {
-    // public void increase() {
+    public synchronized void increase() { // 每次都会阻塞，因此以每次120000增加 i
+        // public void increase() {  // 不会阻塞，因此以每次随机增加 i
         i++;
     }
 
     @Override
     public void run() {
-        for (int j = 0; j < 10000; j++) {
+        for (int j = 0; j < 60000; j++) {
             increase();
         }
     }
 
     public static void main(String[] args) throws InterruptedException {
-        synchronizedTest01 test = new synchronizedTest01();
-        Thread t1 = new Thread(test);
-        Thread t2 = new Thread(test);
-        t1.start();
-        t2.start();
-        t1.join();
-        t2.join();
-        System.out.println(i);
+        for (int j = 0; j < 10; j++) {
+            synchronizedTest01 test = new synchronizedTest01();
+            Thread t1 = new Thread(test);
+            Thread t2 = new Thread(test);
+            t1.start();
+            t2.start();
+            t1.join();
+            t2.join();
+            System.out.println(i);
+        }
     }
 
     /**
