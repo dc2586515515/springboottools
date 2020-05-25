@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>服务器信息</title>
+</head>
+<body>
+</body>
+<script src="js/sockjs.min.js"></script>
+<script src="js/stomp.js"></script>
+<script>
+    // 连接webSocket端点
+    const wsHost = "http://localhost:8080/demo/notification";
+    // 获取信息密钥 /topic/server
+    const wsTopic = "/topic/server";
+
+
+    // 连接websocket
+    this.socket = new SockJS(wsHost);
+    this.stompClient = Stomp.over(this.socket);
+
+    this.stompClient.connect({}, (frame) => {
+        console.log('websocket连接成功:' + frame);
+        this.isConnected = true;
+        alert('websocket服务器连接成功');
+
+        // 注册消息推送
+        this.stompClient.subscribe(wsTopic, (response) => {
+            alert(response.body);
+        });
+
+    });
+
+</script>
+</html>
