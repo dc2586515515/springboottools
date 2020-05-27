@@ -67,6 +67,7 @@
 
     //判断当前浏览器是否支持WebSocket
     if ('WebSocket' in window) {
+        // 创建 WebSocket 对象,指定连接的URL ：ws://127.0.0.1:8090/webSocket
         webSocket = new WebSocket('ws://127.0.0.1:8090/webSocket?username=' + '${username}');
     } else {
         alert("当前浏览器不支持WebSocket");
@@ -77,11 +78,16 @@
         setMessageInnerHTML("WebSocket连接发生错误！");
     }
 
+    // onopen：连接建立时触发
     webSocket.onopen = function () {
         setMessageInnerHTML("WebSocket连接成功！")
     }
 
+    /**
+     * onmessage 客户端接收服务端数据时触发
+     */
     webSocket.onmessage = function (event) {
+        debugger
 
         $("#userList").html("");
         eval("var msg=" + event.data + ";");
@@ -107,15 +113,18 @@
         }
     }
 
+    // onclose：连接关闭时触发
     webSocket.onclose = function () {
         setMessageInnerHTML("WebSocket连接关闭");
     }
+
 
     window.onbeforeunload = function () {
         closeWebSocket();
     }
 
     function closeWebSocket() {
+        // 关闭连接
         webSocket.close();
     }
 
@@ -200,7 +209,6 @@
      * @param re
      */
     function webSocketSend(htmlstr, message, re) {
-        debugger
         $("#message").append(htmlstr);
         var ss = $("#userList :checked");
         var to = "";
@@ -222,7 +230,11 @@
             }
         }
         var msg = JSON.stringify(obj);
+
+        // send() 方法来向服务器发送数据
+        debugger
         webSocket.send(msg);
+
         //如果还是不行 就用延时执行函数 setTimeout 把注释放掉
         // setTimeout(function(){
         //     if(re){
