@@ -40,6 +40,7 @@ public class QrcodeController {
         //app下载链接
         QRCodeUtil.zxingCodeCreate("http://36.7.135.172:38130/zhwlapp/apk/gltApp.apk",
                 "G:/DeskBook/Picture/", 500, "G:/DeskBook/Picture/5.jpg");
+
     }
 
 
@@ -48,7 +49,7 @@ public class QrcodeController {
      */
     @GetMapping("/test")
     public void analysiscode() {
-        Result result = QRCodeUtil.zxingCodeAnalyze("D:/voice/picture/2018/759.jpg");
+        Result result = QRCodeUtil.zxingCodeAnalyze("G:/DeskBook/Picture/withLogo/TT.jpg");
         System.err.println("二维码解析内容：" + result.toString());
     }
 
