@@ -1,0 +1,13 @@
+spring:
+  kafka:
+     #kafka服务地址端口号 可以多个
+    bootstrap-servers: 127.0.0.1:9092
+    consumer:
+     #标记消费者所在的组
+      group-id: kafkaConsumerTest01
+      #消费进度保存机制
+      auto-offset-reset: earliest
+    listener:
+      missing-topics-fatal: false
+server:
+  port: 8080
