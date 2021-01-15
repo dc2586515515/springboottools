@@ -32,6 +32,9 @@ public class Consume02 {
             Connection connection = factory.newConnection();
             Channel channel = connection.createChannel();
 
+            //声明交换机
+            channel.exchangeDeclare(EXCHANGE_NAME, ExchangeTypes.FANOUT);
+
             //申明一个队列
             /**
              * 第一个参数是queue：要创建的队列名
@@ -41,8 +44,7 @@ public class Consume02 {
              * 第五个参数是arguments：其它参数
              */
             channel.queueDeclare(QUEUE_NAME_02, true, false, false, null);
-            //声明交换机
-            channel.exchangeDeclare(EXCHANGE_NAME, ExchangeTypes.FANOUT);
+
 
             //在fanout类型的路由器中，路由键无效，所以设计为空字符串
             final String routeKey = "";

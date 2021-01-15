@@ -38,7 +38,8 @@ public class QrcodeController {
         //         "G:/DeskBook/Picture/", 500, "G:/DeskBook/Picture/5.jpg");
 
         //app下载链接
-        QRCodeUtil.zxingCodeCreate("http://36.7.135.172:38130/zhwlapp/apk/gltApp.apk",
+        // QRCodeUtil.zxingCodeCreate("http://36.7.135.172:38130/zhwlapp/apk/sltApp.apk",
+        QRCodeUtil.zxingCodeCreate("ftp://36.7.135.172:30061/zhwlapp/apk/sltApp.apk",
                 "G:/DeskBook/Picture/", 500, "G:/DeskBook/Picture/5.jpg");
 
     }

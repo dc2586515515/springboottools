@@ -235,10 +235,10 @@ public class QRCodeUtil {
      */
     public static void main(String[] args) {
         // 二维码图片
-        File OrCOdeFile = new File("G:\\DeskBook\\Picture\\850.jpg");
+        File OrCOdeFile = new File("G:\\DeskBook\\Picture\\344.jpg");
         //logo图片
-        File logoFile = new File("G:\\DeskBook\\Picture\\AA.png");
+        File logoFile = new File("G:\\DeskBook\\Picture\\ahslsj.png");
 
-        zxingCodeCreate(OrCOdeFile, logoFile, "G:\\DeskBook\\Picture\\withLogo\\zhwlapp.jpg");
+        zxingCodeCreate(OrCOdeFile, logoFile, "G:\\DeskBook\\Picture\\withLogo\\sltApp.jpg");
     }
 }

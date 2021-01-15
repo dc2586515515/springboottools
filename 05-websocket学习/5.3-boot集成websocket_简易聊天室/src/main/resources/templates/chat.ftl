@@ -87,7 +87,6 @@
      * onmessage 客户端接收服务端数据时触发
      */
     webSocket.onmessage = function (event) {
-        debugger
 
         $("#userList").html("");
         eval("var msg=" + event.data + ";");
@@ -232,7 +231,6 @@
         var msg = JSON.stringify(obj);
 
         // send() 方法来向服务器发送数据
-        debugger
         webSocket.send(msg);
 
         //如果还是不行 就用延时执行函数 setTimeout 把注释放掉
