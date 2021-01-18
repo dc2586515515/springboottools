@@ -12,7 +12,7 @@
 
     <groupId>com.dc</groupId>
     <artifactId>spider-02</artifactId>
-    <description>模拟表单登录-发请求获取数据</description>
+    <description>无需登录-发Http请求获取数据</description>
 
 
     <properties>
