@@ -19,7 +19,7 @@ import java.util.List;
  * pom中去掉 <scope>标签即可在除test外的其他地方使用，使用注解@RunWith(SpringJUnit4ClassRunner.class)注解class类
  * SpringBoot测试的话，配合使用@SpringBootTest注解，starter-test maven中去掉<scope>标签
  *
- * 本例爬虫参考https://blog.csdn.net/qwe86314/article/details/95046472
+ * 本例爬虫参考 https://blog.csdn.net/qwe86314/article/details/91450098
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
