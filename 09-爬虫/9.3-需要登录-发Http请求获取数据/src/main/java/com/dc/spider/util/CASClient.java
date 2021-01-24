@@ -18,9 +18,7 @@ import org.apache.http.util.EntityUtils;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
@@ -92,13 +90,20 @@ public class CASClient extends DefaultHttpClient {
         return "";
     }
 
-    public static DefaultHttpClient casLogin(String url) throws Exception {
+    /**
+     * @param url
+     * @param userName 用户名
+     * @param password 密码
+     * @return
+     * @throws Exception
+     */
+    public static DefaultHttpClient casLogin(String url, String userName, String password) throws Exception {
         DefaultHttpClient httpClient = new CASClient();
         httpClient.getParams().setParameter("User-Agent", "Mozilla/5.0");
         HttpPost post = new HttpPost(url);
         List<NameValuePair> nvps = new ArrayList<NameValuePair>();
-        nvps.add(new BasicNameValuePair("username", "admin"));
-        nvps.add(new BasicNameValuePair("password", "XXX"));
+        nvps.add(new BasicNameValuePair("username", userName));
+        nvps.add(new BasicNameValuePair("password", password));
         nvps.add(new BasicNameValuePair("lt", doCasLoginRequest(httpClient, url)));
         nvps.add(new BasicNameValuePair("execution", "e1s1"));
         nvps.add(new BasicNameValuePair("_eventId", "submit"));
@@ -108,7 +113,7 @@ public class CASClient extends DefaultHttpClient {
         HttpEntity entity = response.getEntity();
         if (entity != null) {
             httpClient.getCookieStore().getCookies().forEach(c -> {
-                System.out.println("****************" + c.getName() + "=>" + c.getValue());
+                System.out.println("cookie是：" + c.getName() + "=>" + c.getValue());
             });
             entity.getContent().close();
         }
@@ -116,13 +121,46 @@ public class CASClient extends DefaultHttpClient {
     }
 
     public static void main(String[] args) throws Exception {
-        DefaultHttpClient httpClient = casLogin("http://172.10.8.2:8080/cas/login?service=http%3A%2F%2F172.10.8.2%3A8080%2FXTBG%2Fj_spring_cas_security_check%3Bjsessionid%3DAB60BEC34035A2733E1B2A322241BFF8&locale=zh_CN");
 
-        //登录成功后需要访问的请求
-        HttpGet httpGet = new HttpGet("http://172.10.8.2:8080/XTBG/newsrelease/list.do");
-        CloseableHttpResponse response = httpClient.execute(httpGet);
-        String entity = EntityUtils.toString(response.getEntity(), "utf-8");
-        System.out.println(entity);
+        DefaultHttpClient httpClient = casLogin("http://172.10.8.2:8080/cas/login", "admin", "ahslsj123");
+
+        //登录成功后需要访问的请求  GET请求
+//        HttpGet httpGet = new HttpGet("http://172.10.8.2:8080/XTBG/newsrelease/list.do");
+//        CloseableHttpResponse response = httpClient.execute(httpGet);
+//        String entity = EntityUtils.toString(response.getEntity(), "utf-8");
+//        System.out.println(entity);
+
+        // post请求
+        HttpPost httpPost = new HttpPost("http://172.10.8.2:8080/ccyw/qyxx/queryQyxxPage.do?qylx=0");
+        List<NameValuePair> nvps = new ArrayList<NameValuePair>();
+        nvps.add(new BasicNameValuePair("qyxzbh", ""));
+        nvps.add(new BasicNameValuePair("qymc", ""));
+        nvps.add(new BasicNameValuePair("page", "1"));
+        nvps.add(new BasicNameValuePair("rows", "20"));
+        httpPost.setEntity(new UrlEncodedFormEntity(nvps, "UTF-8"));
+        HttpResponse response2 = httpClient.execute(httpPost);
+        HttpEntity entity2 = response2.getEntity();
+//        String entity2 = EntityUtils.toString(response2.getEntity(), "utf-8");
+        System.out.println(entity2);
+        InputStream is = entity2.getContent();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        //10MB的缓存
+        byte[] buffer = new byte[10485760];
+        int len = 0;
+        while ((len = is.read(buffer)) != -1) {
+            baos.write(buffer, 0, len);
+        }
+        String jsonString = baos.toString();
+        baos.close();
+        is.close();
+
+        System.out.println(jsonString);
+
+
+//        HttpGet httpGet2 = new HttpGet("http://172.10.8.2:8080/ccyw/qyxx/queryQyxxPage.do?qylx=0&page=1&rows=2000");
+//        CloseableHttpResponse response3 = httpClient.execute(httpGet2);
+//        String entity3 = EntityUtils.toString(response3.getEntity(), "utf-8");
+//        System.out.println(entity3);
     }
 
 }
