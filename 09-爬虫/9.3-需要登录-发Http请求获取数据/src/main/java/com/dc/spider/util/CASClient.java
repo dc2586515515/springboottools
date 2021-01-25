@@ -109,6 +109,7 @@ public class CASClient extends DefaultHttpClient {
         nvps.add(new BasicNameValuePair("_eventId", "submit"));
         nvps.add(new BasicNameValuePair("submit", "登录"));
         post.setEntity(new UrlEncodedFormEntity(nvps, "UTF-8"));
+
         HttpResponse response = httpClient.execute(post);
         HttpEntity entity = response.getEntity();
         if (entity != null) {
@@ -125,42 +126,29 @@ public class CASClient extends DefaultHttpClient {
         DefaultHttpClient httpClient = casLogin("http://172.10.8.2:8080/cas/login", "admin", "ahslsj123");
 
         //登录成功后需要访问的请求  GET请求
-//        HttpGet httpGet = new HttpGet("http://172.10.8.2:8080/XTBG/newsrelease/list.do");
-//        CloseableHttpResponse response = httpClient.execute(httpGet);
-//        String entity = EntityUtils.toString(response.getEntity(), "utf-8");
-//        System.out.println(entity);
+        // HttpGet httpGet = new HttpGet("http://172.10.8.2:8080/XTBG/newsrelease/list.do");
+        // CloseableHttpResponse response = httpClient.execute(httpGet);
+        // String entity = EntityUtils.toString(response.getEntity(), "utf-8");
+        // System.out.println(entity);
 
-        // post请求
+        // 登录成功后需要访问的请求 POST请求
         HttpPost httpPost = new HttpPost("http://172.10.8.2:8080/ccyw/qyxx/queryQyxxPage.do?qylx=0");
         List<NameValuePair> nvps = new ArrayList<NameValuePair>();
-        nvps.add(new BasicNameValuePair("qyxzbh", ""));
-        nvps.add(new BasicNameValuePair("qymc", ""));
         nvps.add(new BasicNameValuePair("page", "1"));
-        nvps.add(new BasicNameValuePair("rows", "20"));
+        nvps.add(new BasicNameValuePair("rows", "10"));
         httpPost.setEntity(new UrlEncodedFormEntity(nvps, "UTF-8"));
+
+        StringBuilder sb = new StringBuilder();
+        httpClient.getCookieStore().getCookies().forEach((cookie) -> {
+            sb.append(cookie.getName() + "=" + cookie.getValue() + ";");
+        });
+        String s = sb.toString();
+        httpPost.setHeader("Cookie", "JSESSIONID=F18FF3360DE3302B6D7E89980EBFAFB2;");
+        // httpPost.setHeader("Cookie", "JSESSIONID=F18FF3360DE3302B6D7E89980EBFAFB2;CASTGC=TGT-20529-yMNV3AUdUoaN7sNSjCbfKxFdrOrtIHZ5mifcc4hoEjmhcO71Gf-cas01.example.org;");
         HttpResponse response2 = httpClient.execute(httpPost);
-        HttpEntity entity2 = response2.getEntity();
-//        String entity2 = EntityUtils.toString(response2.getEntity(), "utf-8");
+        String entity2 = EntityUtils.toString(response2.getEntity(), "utf-8");
         System.out.println(entity2);
-        InputStream is = entity2.getContent();
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        //10MB的缓存
-        byte[] buffer = new byte[10485760];
-        int len = 0;
-        while ((len = is.read(buffer)) != -1) {
-            baos.write(buffer, 0, len);
-        }
-        String jsonString = baos.toString();
-        baos.close();
-        is.close();
 
-        System.out.println(jsonString);
-
-
-//        HttpGet httpGet2 = new HttpGet("http://172.10.8.2:8080/ccyw/qyxx/queryQyxxPage.do?qylx=0&page=1&rows=2000");
-//        CloseableHttpResponse response3 = httpClient.execute(httpGet2);
-//        String entity3 = EntityUtils.toString(response3.getEntity(), "utf-8");
-//        System.out.println(entity3);
     }
 
 }
