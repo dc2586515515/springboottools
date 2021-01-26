@@ -2,7 +2,6 @@ package cn.itcast.crawler.test;
 
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
@@ -15,19 +14,12 @@ import java.io.IOException;
  * @Date 2021-01-26
  */
 public class HttpPostTest {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         // 创建HttpClient对象
         CloseableHttpClient httpClient = HttpClients.createDefault();
 
-        // 设置请求地址是: http://yun.itheima.com/search?keys=Java
-        // 创建URIBuilder
-        URIBuilder uriBuilder = new URIBuilder("http://yun.itheima.com/search?keys=Java");
-        // 设置参数
-        uriBuilder.setParameter("keys", "Java");
         // 创建HttpPost对象, 设置url访问地址
-        HttpPost httpPost = new HttpPost(uriBuilder.build());
-
-        System.out.println("发起请求的信息: " + httpPost);
+        HttpPost httpPost = new HttpPost("http://www.itcast.cn");
 
         CloseableHttpResponse response = null;
         try {
