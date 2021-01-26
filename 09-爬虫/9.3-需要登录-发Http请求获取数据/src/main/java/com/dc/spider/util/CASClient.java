@@ -132,7 +132,8 @@ public class CASClient extends DefaultHttpClient {
         // System.out.println(entity);
 
         // 登录成功后需要访问的请求 POST请求
-        HttpPost httpPost = new HttpPost("http://172.10.8.2:8080/ccyw/qyxx/queryQyxxPage.do?qylx=0");
+        // todo 未完成， 待解决（直接从页面复制 cookie可以，从httpclient中获取cookie不行）
+       /* HttpPost httpPost = new HttpPost("http://172.10.8.2:8080/ccyw/qyxx/queryQyxxPage.do?qylx=0");
         List<NameValuePair> nvps = new ArrayList<NameValuePair>();
         nvps.add(new BasicNameValuePair("page", "1"));
         nvps.add(new BasicNameValuePair("rows", "10"));
@@ -147,7 +148,7 @@ public class CASClient extends DefaultHttpClient {
         // httpPost.setHeader("Cookie", "JSESSIONID=F18FF3360DE3302B6D7E89980EBFAFB2;CASTGC=TGT-20529-yMNV3AUdUoaN7sNSjCbfKxFdrOrtIHZ5mifcc4hoEjmhcO71Gf-cas01.example.org;");
         HttpResponse response2 = httpClient.execute(httpPost);
         String entity2 = EntityUtils.toString(response2.getEntity(), "utf-8");
-        System.out.println(entity2);
+        System.out.println(entity2);*/
 
     }
 

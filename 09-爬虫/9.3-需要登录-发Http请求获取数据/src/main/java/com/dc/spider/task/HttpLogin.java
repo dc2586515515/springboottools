@@ -20,7 +20,7 @@ public class HttpLogin {
         PostMethod postMethod = new PostMethod(loginUrl);
 
         // 设置登陆时要求的信息，用户名和密码
-        NameValuePair[] data = {new NameValuePair("j_username", "k3401240096"), new NameValuePair("j_password", "40096#@a")};
+        NameValuePair[] data = {new NameValuePair("j_username", "XXX"), new NameValuePair("j_password", "XXX")};
         postMethod.setRequestBody(data);
         try {
             // 设置 HttpClient 接收 Cookie,用与浏览器一样的策略
