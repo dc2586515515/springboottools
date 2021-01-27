@@ -3,6 +3,8 @@ package jsoup;
 import org.apache.commons.io.FileUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.junit.Test;
 
 import java.io.File;
@@ -61,5 +63,35 @@ public class JsoupFirstTest {
         // 解析文件
         String title = doc.getElementsByTag("title").first().text();
         System.out.println(title);
+    }
+
+    /**
+     * 使用 DOM 方式获取元素
+     *
+     * @throws Exception
+     */
+    @Test
+    public void testDom() throws Exception {
+        // 解析文件件, 获取Document对象
+        Document doc = Jsoup.parse(new File("F:\\Learing\\2020Learin\\codespace\\dc\\springboottools\\09-爬虫\\9.4-网络爬虫 HttpClient Jsoup WebMagic\\itcast-crawler-first\\src\\test\\java\\html\\test.html"), "utf8");
+        // 1.根据id查询元素getElementById
+        // Element element = doc.getElementById("city_bj");
+
+        // 2.根据标签获取元素getElementsByTag
+        // Element element = doc.getElementsByTag("span").first();
+
+        // 3.根据class获取元素getElementsByClass
+        // Element element = doc.getElementsByClass("class_a class_b").first();
+        // Element element = doc.getElementsByClass("class_a").first();
+        // Element element = doc.getElementsByClass("class_b").first();
+
+        // 4.根据属性获取元素getElementsByAttribute
+        // Element element = doc.getElementsByAttribute("abc").first();
+
+        // 5.根据属性与属性值筛选
+        Element element = doc.getElementsByAttributeValue("href", "http://sh.itcast.cn").first();
+
+        // 打印元素内容
+        System.out.println("获取到的元素内容是: " + element.text());
     }
 }
