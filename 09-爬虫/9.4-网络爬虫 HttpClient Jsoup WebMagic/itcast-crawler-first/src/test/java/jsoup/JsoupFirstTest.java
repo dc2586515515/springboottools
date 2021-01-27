@@ -2,6 +2,7 @@ package jsoup;
 
 import org.apache.commons.io.FileUtils;
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Attributes;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -10,6 +11,7 @@ import org.junit.Test;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Set;
 
 /**
  * @Description PS:虽然使用Jsoup可以替代 HttpClient直接发起请求解析数据，但是往往不会这样用，因为实际的开发过程中，
@@ -93,5 +95,44 @@ public class JsoupFirstTest {
 
         // 打印元素内容
         System.out.println("获取到的元素内容是: " + element.text());
+    }
+
+
+    /**
+     * 获取元素中的数据
+     *
+     * @throws Exception
+     */
+    @Test
+    public void testData() throws Exception {
+        // 解析文件件, 获取Document对象
+        Document doc = Jsoup.parse(new File("F:\\Learing\\2020Learin\\codespace\\dc\\springboottools\\09-爬虫\\9.4-网络爬虫 HttpClient Jsoup WebMagic\\itcast-crawler-first\\src\\test\\java\\html\\test.html"), "utf8");
+        // 根据id 获取元素
+        Element element = doc.getElementById("test");
+
+        String str = "";
+        // 元素中获取数据
+        // 1. 从元素中获取 id
+        // str = element.id();
+
+        // 2. 从元素中获取 className
+        // str = element.className();
+        // Set<String> classNames = element.classNames();
+        // classNames.forEach(item -> System.out.println(item));
+
+        // 3. 从元素中获取 attr
+        // str = element.attr("id");
+        // str = element.attr("class");
+
+        // 4. 从元素中获取 所有属性 attributes
+        // Attributes attributes = element.attributes();
+        // System.out.println(attributes.toString());
+
+        // 5. 从元素中获取 文本内容text
+        str = element.text();
+
+        //打印
+        System.out.println("获取到的数据是：" + str);
+
     }
 }
