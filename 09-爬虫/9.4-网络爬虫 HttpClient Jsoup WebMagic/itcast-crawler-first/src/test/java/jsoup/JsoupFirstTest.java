@@ -19,6 +19,8 @@ public class JsoupFirstTest {
 
     /**
      * jsoup解析 URL
+     *
+     * @throws Exception
      */
     @Test
     public void testUrl() throws IOException {
@@ -31,14 +33,32 @@ public class JsoupFirstTest {
 
     /**
      * 解析字符串
+     *
+     * @throws Exception
      */
     @Test
     public void testString() throws Exception {
         // 使用工具类读取文件, 获取字符串
-        String content = FileUtils.readFileToString(new File("F:\\Learing\\2020Learin\\codespace\\dc\\springboottools\\09-爬虫\\9.4-网络爬虫 HttpClient Jsoup WebMagic\\itcast-crawler-first\\src\\test\\java\\html\\test.html"), "utf8");
+        String content = FileUtils.readFileToString(new File("F:\\Learing\\2020Learin\\codespace\\dc\\springboottools\\09-爬虫\\9.4-网络爬虫 HttpClient Jsoup WebMagic\\itcast-crawler-first\\src\\test\\java\\html\\test.html"),
+                "utf8");
 
         // 解析字符串
         Document doc = Jsoup.parse(content);
+        String title = doc.getElementsByTag("title").first().text();
+        System.out.println(title);
+    }
+
+    /**
+     * Jsoup 解析文件
+     *
+     * @throws Exception
+     */
+    @Test
+    public void testFile() throws Exception {
+        Document doc = Jsoup.parse(new File("F:\\Learing\\2020Learin\\codespace\\dc\\springboottools\\09-爬虫\\9.4-网络爬虫 HttpClient Jsoup WebMagic\\itcast-crawler-first\\src\\test\\java\\html\\test.html"),
+                "utf8");
+
+        // 解析文件
         String title = doc.getElementsByTag("title").first().text();
         System.out.println(title);
     }
