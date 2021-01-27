@@ -1,4 +1,4 @@
-package cn.itcast.crawler.test;
+package cn.itcast.crawler.httpClientTest;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
