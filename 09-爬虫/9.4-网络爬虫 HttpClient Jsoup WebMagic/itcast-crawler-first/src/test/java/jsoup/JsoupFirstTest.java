@@ -133,6 +133,36 @@ public class JsoupFirstTest {
 
         //打印
         System.out.println("获取到的数据是：" + str);
+    }
 
+    /**
+     * Selector选择器概述
+     *
+     * @throws Exception
+     */
+    @Test
+    public void testSelector() throws Exception {
+        // 解析html文件，获取Document对象
+        Document doc = Jsoup.parse(new File("F:\\Learing\\2020Learin\\codespace\\dc\\springboottools\\09-爬虫\\9.4-网络爬虫 HttpClient Jsoup WebMagic\\itcast-crawler-first\\src\\test\\java\\html\\test.html"), "utf8");
+
+        // tagname：通过标签查找元素，比如： span
+        // Elements elements = doc.select("span");
+        // elements.forEach(element -> System.out.println(element.text()));
+
+        // #id：通过ID查找元素，比如：#city_bj
+        // Element element = doc.select("#city_bj").first();
+        // System.out.println(element.text());
+
+        // .class：通过 class名称查找元素，比如：.class_a
+        // Element element = doc.select(".class_a").first();
+        // System.out.println(element.text());
+
+        // [attribute]：利用属性查找元素，比如：[abc]
+        // Element element = doc.select("[abc]").first();
+        // System.out.println(element.text());
+
+        // [attr=value]：利用属性值来查找元素，比如：[class=s_name]
+        Elements elements = doc.select("[class=s_name]");
+        elements.forEach(element -> System.out.println(element.text()));
     }
 }
