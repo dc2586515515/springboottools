@@ -165,4 +165,44 @@ public class JsoupFirstTest {
         Elements elements = doc.select("[class=s_name]");
         elements.forEach(element -> System.out.println(element.text()));
     }
+
+    /**
+     * Selector选择器组合使用
+     *
+     * @throws Exception
+     */
+    @Test
+    public void testSelector2() throws Exception {
+        // 解析html文件，获取Document对象
+        Document doc = Jsoup.parse(new File("F:\\Learing\\2020Learin\\codespace\\dc\\springboottools\\09-爬虫\\9.4-网络爬虫 HttpClient Jsoup WebMagic\\itcast-crawler-first\\src\\test\\java\\html\\test.html"), "utf8");
+
+        //el#id: 元素+ID，比如： h3#city_bj
+        // Element element = doc.select("h3#city_bj").first();
+        // System.out.println(element.text());
+
+        //el.class: 元素+class，比如： li.class_a
+        // Element element = doc.select("li.class_a").first();
+        // System.out.println(element.text());
+
+        //el[attr]: 元素+属性名，比如： span[abc]
+        // Element element = doc.select("span[abc]").first();
+        // System.out.println(element.text());
+
+        //任意组合: 比如：span[abc].s_name
+        // Element element = doc.select("span[abc].s_name").first();
+        // System.out.println(element.text());
+
+        // 后代选择器
+        // Elements elements = doc.select(".city_con li");
+        // elements.forEach(element -> System.out.println(element.text()));
+
+        // 父子选择器
+        // Elements elements = doc.select(".city_con > ul > li");
+        // elements.forEach(element -> System.out.println(element.text()));
+
+        //parent > *: 查找某个父元素下所有直接子元素
+        Elements elements = doc.select(".city_con > ul > *");
+        elements.forEach(element -> System.out.println(element.text()));
+
+    }
 }
