@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -32,6 +33,8 @@ public class GoodController {
 
         try {
             Boolean flag = stringRedisTemplate.opsForValue().setIfAbsent(REDIS_LOCK_KEY, value);
+            // 防止服务的机器宕机，无法执行finally的释放锁代码，需要在redis中给锁设定超时时间
+            stringRedisTemplate.expire(REDIS_LOCK_KEY, 10L, TimeUnit.SECONDS);
             if (!flag) {
                 return "抢锁失败，┭┮﹏┭┮";
             }
