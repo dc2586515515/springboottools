@@ -107,8 +107,13 @@ public class GoodController {
             //     }
             // }
 
-            // 使用redisson
-            redissonLock.unlock();
+            // 使用Redisson
+            // redissonLock.unlock();
+
+            // 更严谨
+            if (redissonLock.isLocked() && redissonLock.isHeldByCurrentThread()) {
+                redissonLock.unlock();
+            }
         }
     }
 
