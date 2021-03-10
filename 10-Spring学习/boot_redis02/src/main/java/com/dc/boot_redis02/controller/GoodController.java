@@ -54,8 +54,11 @@ public class GoodController {
             }
             return "商品已经售罄/活动结束/调用超时，欢迎下次光临" + "\t 服务器端口: " + serverPort;
         } finally {
-            // 释放锁
-            stringRedisTemplate.delete(REDIS_LOCK_KEY);
+            // 如果锁超时时间设置10s，A线程执行了12s，在第10s时，redis已经将A的锁删除，同时B线程获得锁，第12S时，A线程执行完毕，删除锁，但此时B还在执行，A删除的是B的锁，误删了别人的锁，因此，需要判断Value是否等于自己的锁的值，才能删除
+            if (stringRedisTemplate.opsForValue().get(REDIS_LOCK_KEY).equals(value)) {
+                // 释放锁
+                stringRedisTemplate.delete(REDIS_LOCK_KEY);
+            }
         }
     }
 
