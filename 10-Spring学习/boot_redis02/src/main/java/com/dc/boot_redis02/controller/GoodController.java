@@ -1,6 +1,8 @@
 package com.dc.boot_redis02.controller;
 
 import com.dc.boot_redis02.util.RedisUtils;
+import org.redisson.Redisson;
+import org.redisson.api.RLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -28,6 +30,9 @@ public class GoodController {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
+    @Autowired
+    private Redisson redisson;
+
     @Value("${server.port}")
     private String serverPort;
 
@@ -35,16 +40,20 @@ public class GoodController {
     public String buy_Goods() throws Exception {
         String value = UUID.randomUUID().toString() + Thread.currentThread().getName();
 
+        // 使用redisson
+        RLock redissonLock = redisson.getLock(REDIS_LOCK_KEY);
+        redissonLock.lock();
+
         try {
             // Boolean flag = stringRedisTemplate.opsForValue().setIfAbsent(REDIS_LOCK_KEY, value);
             // // 防止服务的机器宕机，无法执行finally的释放锁代码，需要在redis中给锁设定超时时间
             // stringRedisTemplate.expire(REDIS_LOCK_KEY, 10L, TimeUnit.SECONDS);
 
             // 加锁 与设置过期时间不能分为两行写，不具备原子性，假如加锁代码执行完毕，设置时间未执行的时候宕机了，则不具备原子性，所以合成一行
-            Boolean flag = stringRedisTemplate.opsForValue().setIfAbsent(REDIS_LOCK_KEY, value, 10L, TimeUnit.SECONDS);
-            if (!flag) {
-                return "抢锁失败，┭┮﹏┭┮";
-            }
+            // Boolean flag = stringRedisTemplate.opsForValue().setIfAbsent(REDIS_LOCK_KEY, value, 10L, TimeUnit.SECONDS);
+            // if (!flag) {
+            //     return "抢锁失败，┭┮﹏┭┮";
+            // }
             String result = stringRedisTemplate.opsForValue().get("goods:001");
             int goodsNumber = result == null ? 0 : Integer.parseInt(result);
 
@@ -82,22 +91,24 @@ public class GoodController {
             // }
 
             // 上述方法为了应对面试，下面用lua脚本保持原子性
-            Jedis jedis = RedisUtils.getJedis();
+            // Jedis jedis = RedisUtils.getJedis();
+            // String script = "if redis.call('get', KEYS[1]) == ARGV[1]" + "then "
+            //         + "return redis.call('del', KEYS[1])" + "else " + "  return 0 " + "end";
+            // try {
+            //     Object result = jedis.eval(script, Collections.singletonList(REDIS_LOCK_KEY), Collections.singletonList(value));
+            //     if ("1".equals(result.toString())) {
+            //         System.out.println("------del REDIS_LOCK_KEY success，lua脚本删除锁成功");
+            //     } else {
+            //         System.out.println("------del REDIS_LOCK_KEY error，lua脚本删除锁失败");
+            //     }
+            // } finally {
+            //     if (null != jedis) {
+            //         jedis.close();
+            //     }
+            // }
 
-            String script = "if redis.call('get', KEYS[1]) == ARGV[1]" + "then "
-                    + "return redis.call('del', KEYS[1])" + "else " + "  return 0 " + "end";
-            try {
-                Object result = jedis.eval(script, Collections.singletonList(REDIS_LOCK_KEY), Collections.singletonList(value));
-                if ("1".equals(result.toString())) {
-                    System.out.println("------del REDIS_LOCK_KEY success，lua脚本删除锁成功");
-                } else {
-                    System.out.println("------del REDIS_LOCK_KEY error，lua脚本删除锁失败");
-                }
-            } finally {
-                if (null != jedis) {
-                    jedis.close();
-                }
-            }
+            // 使用redisson
+            redissonLock.unlock();
         }
     }
 
