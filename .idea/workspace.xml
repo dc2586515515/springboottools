@@ -4,25 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76ba5427-75e7-471e-b2c2-d5c69b625e65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/09-爬虫/9.4-网络爬虫 HttpClient Jsoup WebMagic/itcast-crawler-first/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/09-爬虫/9.4-网络爬虫 HttpClient Jsoup WebMagic/itcast-crawler-first/src/main/java/cn/itcast/crawler/test/CrawlerFirst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/09-爬虫/9.4-网络爬虫 HttpClient Jsoup WebMagic/itcast-crawler-first/src/main/resources/log4j.properties" afterDir="false" />
+    <list default="true" id="76ba5427-75e7-471e-b2c2-d5c69b625e65" name="Default Changelist" comment="redisson 解锁更严谨">
+      <change beforePath="$PROJECT_DIR$/10-Spring学习/spring-demo/src/main/java/com/dc/spring/demo/quote/Quote.java" beforeDir="false" afterPath="$PROJECT_DIR$/10-Spring学习/spring-demo/src/main/java/com/dc/spring/demo/quote/Quote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-Spring学习/spring-demo/src/main/java/com/dc/spring/demo/spi/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/10-Spring学习/spring-demo/src/main/java/com/dc/spring/demo/spi/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-Spring学习/spring-demo/src/main/java/com/dc/spring/demo/vo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/10-Spring学习/spring-demo/src/main/java/com/dc/spring/demo/vo/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Aspect" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/dc2586515515/springboottools" />
+      </set>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -32,32 +46,57 @@
         <option name="userSettingsFile" value="E:\softWare\apache-maven-3.3.3-bin\apache-maven-3.3.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
-    <option name="disabledProfiles">
-      <list>
-        <option value="dev" />
-      </list>
-    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1nXTiBSexjL54ZkStvOXcqu0UWV" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/09-爬虫/9.4-网络爬虫 HttpClient Jsoup WebMagic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/10-Spring学习" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15354331" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Application.CrawlerFirst">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Learing\2020Learin\codespace\dc\springboottools\10-Spring学习\boot_redis02\src\main\java\com\dc\boot_redis02" />
+      <recent name="F:\Learing\2020Learin\codespace\dc\springboottools\10-Spring学习" />
+      <recent name="F:\Learing\2020Learin\codespace\dc\springboottools" />
+      <recent name="F:\Learing\2020Learin\codespace\dc\springboottools\10-Spring学习\Spring-Aop\src\main\java\com\dc" />
+      <recent name="F:\Learing\2020Learin\codespace\dc\springboottools\09-爬虫\9.4-网络爬虫 HttpClient Jsoup WebMagic\itcast-crawler-first\src\test\java\html" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.dc.boot_redis02.util" />
+      <recent name="com.dc.spring.circular.dependencies.service" />
+      <recent name="com.dc.aop" />
+      <recent name="cn.itcast.crawler.config" />
+      <recent name="cn.itcast.crawler.test" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MainClass">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -65,13 +104,13 @@
       <module />
       <method />
     </configuration>
-    <configuration name="CASClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dc.spider.util.CASClient" />
-      <module name="spider-03" />
+    <configuration name="ClientSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dc.spring.circular.dependencies.constructorinjection.ClientSet" />
+      <module name="spring-circular-dependencies" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dc.spider.util.*" />
+          <option name="PATTERN" value="com.dc.spring.circular.dependencies.constructorinjection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,13 +118,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CrawlerFirst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.itcast.crawler.test.CrawlerFirst" />
-      <module name="itcast-crawler-first" />
+    <configuration name="ClientSpringContainer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dc.spring.circular.dependencies.constructorinjection.ClientSpringContainer" />
+      <module name="spring-circular-dependencies" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.itcast.crawler.test.*" />
+          <option name="PATTERN" value="com.dc.spring.circular.dependencies.constructorinjection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,13 +132,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HttpGetForData01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dc.spider.task.HttpGetForData01" />
-      <module name="spider-03" />
+    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dc.spring.demo.spi.MainClass" />
+      <module name="spring-demo" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dc.spider.task.*" />
+          <option name="PATTERN" value="com.dc.spring.demo.spi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,10 +146,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HttpGetForData02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dc.spider.task.HttpGetForData02" />
-      <module name="spider-03" />
+    <configuration name="TestHashMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dc.spring.circular.dependencies.test.TestHashMap" />
+      <module name="spring-circular-dependencies" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dc.spring.circular.dependencies.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestJconsoleHeap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dc.spring.circular.dependencies.test.TestJconsoleHeap" />
+      <module name="spring-circular-dependencies" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dc.spring.circular.dependencies.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,26 +193,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SSOLogin.ssologin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spider-03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dc.spider.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dc.spider.util" />
-      <option name="MAIN_CLASS_NAME" value="com.dc.spider.util.SSOLogin" />
-      <option name="METHOD_NAME" value="ssologin" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    <configuration name="AopAppcation" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Spring-Aop" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dc.AopAppcation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BootRedis01Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="boot_redis01" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dc.boot_redis01.BootRedis01Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BootRedis02Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="boot_redis02" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dc.boot_redis02.BootRedis02Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringCircularDependenciesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-circular-dependencies" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dc.spring.circular.dependencies.SpringCircularDependenciesApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dc.spring.demo.SpringDemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="synchronizedLock" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="synchronized-Lock" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dc.synchronizedLock.synchronizedLock" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,13 +260,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.ClientSet" />
+      <item itemvalue="Application.ClientSpringContainer" />
+      <item itemvalue="Application.TestJconsoleHeap" />
+      <item itemvalue="Application.TestHashMap" />
+      <item itemvalue="Application.MainClass" />
+      <item itemvalue="Spring Boot.AopAppcation" />
+      <item itemvalue="Spring Boot.BootRedis02Application" />
+      <item itemvalue="Spring Boot.BootRedis01Application" />
+      <item itemvalue="Spring Boot.SpringCircularDependenciesApplication" />
+      <item itemvalue="Spring Boot.SpringTestApplication" />
+      <item itemvalue="Spring Boot.synchronizedLock" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CrawlerFirst" />
-        <item itemvalue="Application.HttpGetForData02" />
-        <item itemvalue="Application.HttpGetForData01" />
-        <item itemvalue="JUnit.SSOLogin.ssologin" />
-        <item itemvalue="Application.CASClient" />
+        <item itemvalue="Application.MainClass" />
+        <item itemvalue="Application.TestHashMap" />
+        <item itemvalue="Application.TestJconsoleHeap" />
+        <item itemvalue="Application.ClientSpringContainer" />
+        <item itemvalue="Application.ClientSet" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +295,24 @@
       <option name="presentableId" value="Default" />
       <updated>1611535567898</updated>
       <workItem from="1611535570528" duration="11321000" />
-      <workItem from="1611621678575" duration="18738000" />
+      <workItem from="1611621678575" duration="26077000" />
+      <workItem from="1611710216944" duration="10785000" />
+      <workItem from="1611795423689" duration="14457000" />
+      <workItem from="1611821769864" duration="2531000" />
+      <workItem from="1614307676478" duration="845000" />
+      <workItem from="1614577841029" duration="15220000" />
+      <workItem from="1614731965183" duration="6306000" />
+      <workItem from="1615252745367" duration="21339000" />
+      <workItem from="1615336900797" duration="14476000" />
+      <workItem from="1615380216516" duration="4096000" />
+      <workItem from="1615423191210" duration="5705000" />
+      <workItem from="1615509797174" duration="2660000" />
+      <workItem from="1616047712929" duration="1690000" />
+      <workItem from="1616385489260" duration="1408000" />
+      <workItem from="1616460213873" duration="22504000" />
+      <workItem from="1616557636988" duration="1256000" />
+      <workItem from="1616632812683" duration="5512000" />
+      <workItem from="1617065418864" duration="4517000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1611548920993</created>
@@ -214,18 +328,291 @@
       <option name="project" value="LOCAL" />
       <updated>1611642479164</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Revert &quot;传智播客网络爬虫入门程序&quot;&#10;&#10;This reverts commit f7a8af5e">
+      <created>1611645867040</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611645867040</updated>
+    </task>
+    <task id="LOCAL-00004" summary="传智播客网络爬虫入门程序">
+      <created>1611645991020</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611645991020</updated>
+    </task>
+    <task id="LOCAL-00005" summary="HttpClient Get请求">
+      <created>1611648203149</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611648203149</updated>
+    </task>
+    <task id="LOCAL-00006" summary="HttpClient Get请求  带参数">
+      <created>1611649066984</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1611649066984</updated>
+    </task>
+    <task id="LOCAL-00007" summary="HttpClient Post请求">
+      <created>1611649346768</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1611649346768</updated>
+    </task>
+    <task id="LOCAL-00008" summary="HttpClient Post请求">
+      <created>1611649598285</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1611649598285</updated>
+    </task>
+    <task id="LOCAL-00009" summary="HttpClient Post请求 带参数">
+      <created>1611650608370</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1611650608370</updated>
+    </task>
+    <task id="LOCAL-00010" summary="HttpClient 连接池">
+      <created>1611652751129</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611652751129</updated>
+    </task>
+    <task id="LOCAL-00011" summary="HttpClient 请求参数配置">
+      <created>1611711874667</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611711874667</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Jsoup 解析URL">
+      <created>1611714394770</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1611714394770</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Jsoup 解析字符串">
+      <created>1611715326513</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1611715326513</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Jsoup 解析文件">
+      <created>1611715533274</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1611715533274</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Jsoup 使用Dom方式遍历文档">
+      <created>1611716794883</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1611716794883</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Jsoup 获取元素中的数据">
+      <created>1611719518293</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1611719518293</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Jsoup Selector选择器使用">
+      <created>1611797895944</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1611797895944</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Jsoup Selector选择器组合使用">
+      <created>1611812356035</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1611812356035</updated>
+    </task>
+    <task id="LOCAL-00019" summary="爬取京东手机信息">
+      <created>1611819094164</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1611819094164</updated>
+    </task>
+    <task id="LOCAL-00020" summary="webmagic">
+      <created>1611821825102</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1611821825102</updated>
+    </task>
+    <task id="LOCAL-00021" summary="爬虫 &amp;&amp; Spring4 AOP顺序">
+      <created>1615255151953</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1615255151953</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Spring5 AOP顺序">
+      <created>1615256181457</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1615256181457</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Spring循环依赖">
+      <created>1615262066032</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1615262066032</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Spring循环依赖 源码解析">
+      <created>1615281302942</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1615281302942</updated>
+    </task>
+    <task id="LOCAL-00025" summary="boot + redis">
+      <created>1615344814186</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1615344814186</updated>
+    </task>
+    <task id="LOCAL-00026" summary="本地锁无法解决分布式下，超卖问题">
+      <created>1615357295412</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1615357295412</updated>
+    </task>
+    <task id="LOCAL-00027" summary="加分布式锁">
+      <created>1615357836273</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1615357836273</updated>
+    </task>
+    <task id="LOCAL-00028" summary="释放 加分布式锁">
+      <created>1615357930045</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1615357930045</updated>
+    </task>
+    <task id="LOCAL-00029" summary="为防止执行异常，导致释放锁失败，将释放锁 放到finally中">
+      <created>1615358068562</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1615358068562</updated>
+    </task>
+    <task id="LOCAL-00030" summary="防止服务的机器宕机，无法执行finally的释放锁代码，需要在redis中给锁设定超时时间">
+      <created>1615358390528</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1615358390528</updated>
+    </task>
+    <task id="LOCAL-00031" summary="加锁 与设置过期时间不能分为两行写，不具备原子性，假如加锁代码执行完毕，设置时间未执行的时候宕机了，则不具备原子性，所以合成一行">
+      <created>1615358670529</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1615358670529</updated>
+    </task>
+    <task id="LOCAL-00032" summary="如果锁超时时间设置10s，A线程执行了12s，在第10s时，redis已经将A的锁删除，同时B线程获得锁，第12S时，A线程执行完毕，删除锁，但此时B还在执行，A删除的是B的锁，误删了别人的锁，因此，需要判断Value是否等于自己的锁的值，才能删除">
+      <created>1615359237515</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1615359237515</updated>
+    </task>
+    <task id="LOCAL-00033" summary="finally块的判断+del删除操作不是原子性的,推荐使用lua脚本保证原子性，但是如果不让用lua脚本的话，可以用redis事务">
+      <created>1615362558097</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1615362558097</updated>
+    </task>
+    <task id="LOCAL-00034" summary="lua脚本保证判断key value以及删除key value原子性">
+      <created>1615364655181</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1615364655181</updated>
+    </task>
+    <task id="LOCAL-00035" summary="使用 Redisson实现分布式锁">
+      <created>1615383100616</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1615383100616</updated>
+    </task>
+    <task id="LOCAL-00036" summary="redisson 解锁更严谨">
+      <created>1615383502281</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1615383502281</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="1" />
-    <MESSAGE value="2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2" />
+    <MESSAGE value="Jsoup 解析URL" />
+    <MESSAGE value="Jsoup 解析字符串" />
+    <MESSAGE value="Jsoup 解析文件" />
+    <MESSAGE value="Jsoup 使用Dom方式遍历文档" />
+    <MESSAGE value="Jsoup 获取元素中的数据" />
+    <MESSAGE value="Jsoup Selector选择器使用" />
+    <MESSAGE value="Jsoup Selector选择器组合使用" />
+    <MESSAGE value="爬取京东手机信息" />
+    <MESSAGE value="webmagic" />
+    <MESSAGE value="爬虫 &amp;&amp; Spring4 AOP顺序" />
+    <MESSAGE value="Spring5 AOP顺序" />
+    <MESSAGE value="Spring循环依赖" />
+    <MESSAGE value="Spring循环依赖 源码解析" />
+    <MESSAGE value="boot + redis" />
+    <MESSAGE value="本地锁无法解决分布式下，超卖问题" />
+    <MESSAGE value="加分布式锁" />
+    <MESSAGE value="释放 加分布式锁" />
+    <MESSAGE value="为防止执行异常，导致释放锁失败，将释放锁 放到finally中" />
+    <MESSAGE value="防止服务的机器宕机，无法执行finally的释放锁代码，需要在redis中给锁设定超时时间" />
+    <MESSAGE value="加锁 与设置过期时间不能分为两行写，不具备原子性，假如加锁代码执行完毕，设置时间未执行的时候宕机了，则不具备原子性，所以合成一行" />
+    <MESSAGE value="如果锁超时时间设置10s，A线程执行了12s，在第10s时，redis已经将A的锁删除，同时B线程获得锁，第12S时，A线程执行完毕，删除锁，但此时B还在执行，A删除的是B的锁，误删了别人的锁，因此，需要判断Value是否等于自己的锁的值，才能删除" />
+    <MESSAGE value="finally块的判断+del删除操作不是原子性的,推荐使用lua脚本保证原子性，但是如果不让用lua脚本的话，可以用redis事务" />
+    <MESSAGE value="lua脚本保证判断key value以及删除key value原子性" />
+    <MESSAGE value="使用 Redisson实现分布式锁" />
+    <MESSAGE value="redisson 解锁更严谨" />
+    <option name="LAST_COMMIT_MESSAGE" value="redisson 解锁更严谨" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -234,6 +621,91 @@
           <url>file://$PROJECT_DIR$/09-爬虫/9.3-需要登录-发Http请求获取数据/src/main/java/com/dc/spider/task/HttpGetForData01.java</url>
           <line>37</line>
           <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/10-Spring学习/spring-circular-dependencies/src/main/java/com/dc/spring/circular/dependencies/constructorinjection/ClientSpringContainer.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-context/5.3.4/spring-context-5.3.4.jar!/org/springframework/context/support/ClassPathXmlApplicationContext.class</url>
+          <line>45</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-context/5.3.4/spring-context-5.3.4.jar!/org/springframework/context/support/AbstractApplicationContext.class</url>
+          <line>293</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-context/5.3.4/spring-context-5.3.4.jar!/org/springframework/context/support/AbstractApplicationContext.class</url>
+          <line>519</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.class</url>
+          <line>733</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.class</url>
+          <line>128</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.class</url>
+          <line>199</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar!/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.class</url>
+          <line>133</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.class</url>
+          <line>201</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class</url>
+          <line>329</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class</url>
+          <line>376</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class</url>
+          <line>384</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class</url>
+          <line>967</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class</url>
+          <line>1149</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar!/org/springframework/beans/factory/support/BeanDefinitionValueResolver.class</url>
+          <line>51</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class</url>
+          <line>349</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../maven/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar!/org/springframework/beans/factory/support/BeanDefinitionValueResolver.class</url>
+          <line>210</line>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

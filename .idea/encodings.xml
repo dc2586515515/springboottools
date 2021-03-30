@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/09-爬虫/9.2-无需登录-发Http请求获取数据/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/09-爬虫/9.2-无需登录-发Http请求获取数据/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/09-爬虫/9.3-需要登录-发Http请求获取数据/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04Lock锁/4.1synchronized单点应用-线程锁/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/09-爬虫/9.4-网络爬虫 HttpClient Jsoup WebMagic/itcast-crawler-jd/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-Spring学习/Spring-Aop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-Spring学习/boot_redis01/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-Spring学习/boot_redis02/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-Spring学习/spring-circular-dependencies/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-Spring学习/spring-demo/src/main/java" charset="UTF-8" />
   </component>
 </project>

@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/10-Spring学习/Spring-Aop/Spring-Aop.iml" filepath="$PROJECT_DIR$/10-Spring学习/Spring-Aop/Spring-Aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10-Spring学习/boot_redis01/boot_redis01.iml" filepath="$PROJECT_DIR$/10-Spring学习/boot_redis01/boot_redis01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10-Spring学习/boot_redis02/boot_redis02.iml" filepath="$PROJECT_DIR$/10-Spring学习/boot_redis02/boot_redis02.iml" />
       <module fileurl="file://$PROJECT_DIR$/09-爬虫/9.4-网络爬虫 HttpClient Jsoup WebMagic/itcast-crawler-first/itcast-crawler-first.iml" filepath="$PROJECT_DIR$/09-爬虫/9.4-网络爬虫 HttpClient Jsoup WebMagic/itcast-crawler-first/itcast-crawler-first.iml" />
-      <module fileurl="file://$PROJECT_DIR$/09-爬虫/9.2-无需登录-发Http请求获取数据/spider-02.iml" filepath="$PROJECT_DIR$/09-爬虫/9.2-无需登录-发Http请求获取数据/spider-02.iml" />
-      <module fileurl="file://$PROJECT_DIR$/09-爬虫/9.3-需要登录-发Http请求获取数据/spider-03.iml" filepath="$PROJECT_DIR$/09-爬虫/9.3-需要登录-发Http请求获取数据/spider-03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09-爬虫/9.4-网络爬虫 HttpClient Jsoup WebMagic/itcast-crawler-jd/itcast-crawler-jd.iml" filepath="$PROJECT_DIR$/09-爬虫/9.4-网络爬虫 HttpClient Jsoup WebMagic/itcast-crawler-jd/itcast-crawler-jd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09-爬虫/9.4-网络爬虫 HttpClient Jsoup WebMagic/itcast-crawler-webmagic/itcast-crawler-webmagic.iml" filepath="$PROJECT_DIR$/09-爬虫/9.4-网络爬虫 HttpClient Jsoup WebMagic/itcast-crawler-webmagic/itcast-crawler-webmagic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10-Spring学习/spring-circular-dependencies/spring-circular-dependencies.iml" filepath="$PROJECT_DIR$/10-Spring学习/spring-circular-dependencies/spring-circular-dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10-Spring学习/spring-demo/spring-demo.iml" filepath="$PROJECT_DIR$/10-Spring学习/spring-demo/spring-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springboottools.iml" filepath="$PROJECT_DIR$/.idea/springboottools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04Lock锁/4.1synchronized单点应用-线程锁/synchronized-Lock.iml" filepath="$PROJECT_DIR$/04Lock锁/4.1synchronized单点应用-线程锁/synchronized-Lock.iml" />
     </modules>
   </component>
 </project>
