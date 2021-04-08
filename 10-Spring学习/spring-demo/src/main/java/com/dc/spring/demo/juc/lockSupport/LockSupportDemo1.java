@@ -48,12 +48,14 @@ public class LockSupportDemo1 {
             // try { TimeUnit.SECONDS.sleep(3L);} catch (InterruptedException e) { e.printStackTrace(); }
             System.out.println(Thread.currentThread().getName() + "\t" + "========com in" + System.currentTimeMillis());
             LockSupport.park(); // 被阻塞。。。。等待通知放行，他要通过需要许可证
+            // LockSupport.park(); // park unpark一个对象只能调用一次，permit不可累加
             System.out.println(Thread.currentThread().getName() + "\t" + "被唤醒" + System.currentTimeMillis());
         }, "A");
         a.start();
 
         Thread b = new Thread(() -> {
             LockSupport.unpark(a);
+            // LockSupport.unpark(a);// park unpark一个对象只能调用一次，permit不可累加
             System.out.println(Thread.currentThread().getName() + "\t" + "通知了");
         }, "b");
         b.start();
