@@ -40,8 +40,14 @@ public class SaleTicketDemo1 {
         // 先创建一个资源类
         Ticket ticket = new Ticket();
 
+        // lambda表达式代替 匿名内部类
+        new Thread(() -> {  for (int i = 0; i < 40; i++) ticket.sale();  }, "A").start();
+        new Thread(() -> {  for (int i = 0; i < 40; i++) ticket.sale();  }, "B").start();
+        new Thread(() -> {  for (int i = 0; i < 40; i++) ticket.sale();  }, "C").start();
+
+
         // Thread(Runnable target, String name) 分配一个新的 Thread对象。
-        new Thread(
+       /* new Thread(
                 // new Interface接口，实现内部方法 ==== 就是匿名内部类
                 new Runnable() {
                     @Override
@@ -66,7 +72,7 @@ public class SaleTicketDemo1 {
                     ticket.sale();
                 }
             }
-        }, "C").start();
+        }, "C").start();*/
 
     }
 }
