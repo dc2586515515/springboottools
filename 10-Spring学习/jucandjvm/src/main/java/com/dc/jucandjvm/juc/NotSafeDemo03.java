@@ -2,10 +2,16 @@ package com.dc.jucandjvm.juc;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 import java.util.Vector;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
  * @Description
@@ -17,7 +23,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * 3 解决方案
  *      3.1 new Vector<>();  不推荐
  *      3.2 Collections.synchronizedList(new ArrayList<>());  不推荐
- *      3.3 new CopyOnWriteArrayList<>();
+ *      3.3 new CopyOnWriteArrayList<>(); 写时复制
  *
  * 4 优化建议（同样的错误不犯2次）
  *
@@ -26,6 +32,39 @@ import java.util.concurrent.CopyOnWriteArrayList;
  */
 public class NotSafeDemo03 {
     public static void main(String[] args) {
+        mapNotSafe();
+    }
+
+    /**
+     * Map 不安全
+     */
+    private static void mapNotSafe() {
+        Map<String, String> map = new ConcurrentHashMap<>(); // new HashMap<>();
+        for (int i = 0; i <= 30; i++) {
+            new Thread(() -> {
+                map.put(Thread.currentThread().getName(), UUID.randomUUID().toString().substring(0,8));
+                System.out.println(map);
+            }, String.valueOf(i)).start();
+        }
+    }
+
+    /**
+     * Set 不安全
+     */
+    private static void setNotSafe() {
+        Set<String > set = new CopyOnWriteArraySet<>(); // new HashSet<>();
+        for (int i = 0; i <= 30; i++) {
+            new Thread(() -> {
+                set.add(UUID.randomUUID().toString().substring(0, 8));
+                System.out.println(set);
+            }, String.valueOf(i)).start();
+        }
+    }
+
+    /**
+     * List不安全
+     */
+    private static void listNotSafe() {
         List<String> list = new CopyOnWriteArrayList<>();  // Collections.synchronizedList(new ArrayList<>()); // new Vector<>(); // new ArrayList<>();
 
         // list.add("a");
@@ -40,4 +79,31 @@ public class NotSafeDemo03 {
             }, String.valueOf(i)).start();
         }
     }
+
+
+    /**
+     * 笔记
+     * 写时复制
+     *      CopyOnWrite容器即写时复制的容器。往一个容器添加元素的时候，不直接往当前容器Object[]添加，而是先将当前容器Object[]进行Copy,
+     *      复制出一个新的容器Object[] newELements，然后新的容器Object[ ] newElements里添加元素，添加完元素之后，
+     *      再将原容器的引用指向新的容器setArray(newELements); 这样做的好处是可以对Copyonwrite容器进行并发的读，
+     *      而不需要加锁，因为当前容器不会添加任何元素。所以CopyoOnlrite容器也是一种读写分离的思想，读和写不同的容器
+     *
+     *
+     *    public boolean add(E e) {
+     *         final ReentrantLock lock = this.lock;
+     *         lock.lock();
+     *         try {
+     *             Object[] elements = getArray();
+     *             int len = elements.length;
+     *             Object[] newElements = Arrays.copyOf(elements, len + 1);
+     *             newElements[len] = e;
+     *             setArray(newElements);
+     *             return true;
+     *         } finally {
+     *             lock.unlock();
+     *         }
+     *     }
+     */
+
 }
