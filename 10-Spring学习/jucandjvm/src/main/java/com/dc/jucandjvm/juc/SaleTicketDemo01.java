@@ -34,7 +34,7 @@ class Ticket  // 资源类=实例变量+实例方法
  * @Author DC
  * @Date 2021-04-12
  */
-public class SaleTicketDemo1 {
+public class SaleTicketDemo01 {
     public static void main(String[] args) {  // 主线程，一切程序入口
 
         // 先创建一个资源类
