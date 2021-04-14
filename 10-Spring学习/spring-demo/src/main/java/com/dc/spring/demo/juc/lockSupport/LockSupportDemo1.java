@@ -28,7 +28,8 @@ public class LockSupportDemo1 {
     static Condition condition = lock.newCondition();
 
     public static void main(String[] args) {
-
+        // synchornizedWaitNotify();
+        // lockAwaitSignal();
         lockSupport();
     }
 
@@ -57,7 +58,7 @@ public class LockSupportDemo1 {
             LockSupport.unpark(a);
             // LockSupport.unpark(a);// park unpark一个对象只能调用一次，permit不可累加
             System.out.println(Thread.currentThread().getName() + "\t" + "通知了");
-        }, "b");
+        }, "B");
         b.start();
     }
 
