@@ -47,6 +47,10 @@ class AriCondition {
  * 1 高聚低合前提下，线程操作资源类
  * 2 判断/干活/通知
  * 3 防止多线程虚假唤醒
+ * <p>
+ * 虚假唤醒
+ * 因为if只会执行一次，执行完会接着向下执行if（）外边的
+ * 而while不会，直到条件满足才会向下执行while（）外边的
  */
 public class ProdConsumerDemo4 {
     public static void main(String[] args) throws Exception {
