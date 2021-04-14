@@ -6,7 +6,8 @@ class AriCondition {
     public synchronized void increment() throws Exception {
         String threadName = Thread.currentThread().getName();
         // 1 判断
-        if (number != 0) {
+        // if (number != 0) {
+        while (number != 0) {
             this.wait();
         }
 
@@ -21,7 +22,8 @@ class AriCondition {
     public synchronized void decrement() throws Exception {
         String threadName = Thread.currentThread().getName();
         // 1 判断
-        if (number == 0) {
+        // if (number == 0) {
+        while (number == 0) {
             this.wait();
         }
 
@@ -44,6 +46,7 @@ class AriCondition {
  * <p>
  * 1 高聚低合前提下，线程操作资源类
  * 2 判断/干活/通知
+ * 3 防止多线程虚假唤醒
  */
 public class ProdConsumerDemo4 {
     public static void main(String[] args) throws Exception {
@@ -68,5 +71,26 @@ public class ProdConsumerDemo4 {
                 }
             }
         }, "B").start();
+
+        new Thread(() -> {
+            for (int i = 0; i <= 10; i++) {
+                try {
+                    ariCondition.increment();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }, "C").start();
+
+
+        new Thread(() -> {
+            for (int i = 0; i <= 10; i++) {
+                try {
+                    ariCondition.decrement();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }, "D").start();
     }
 }
