@@ -1,9 +1,57 @@
 package com.dc.jucandjvm.juc;
 
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 class AriCondition {
     private int number = 0;
 
+    private Lock lock = new ReentrantLock();
+    private Condition condition = lock.newCondition();
+
+    // ReentrantLock版
     public synchronized void increment() throws Exception {
+        lock.lock();
+        try {
+            //1 判断
+            while (number != 0) {
+                condition.await();
+            }
+
+            //2 干活
+            number++;
+            System.out.println(Thread.currentThread().getName() + "\t=====>" + number);
+
+            //3通知
+            condition.signalAll();
+        } finally {
+            lock.unlock();
+        }
+
+    }
+
+    public void decrement() throws Exception {
+        lock.lock();
+        try {
+            // 1 判断
+            while (number == 0) {
+                condition.await();
+            }
+
+            //2 干活
+            number--;
+            System.out.println(Thread.currentThread().getName() + "\t=====>" + number);
+            //3 通知
+            condition.signalAll();
+        } finally {
+            lock.unlock();
+        }
+    }
+
+
+    // synchronized 版
+    /*public synchronized void increment() throws Exception {
         String threadName = Thread.currentThread().getName();
         // 1 判断
         // if (number != 0) {
@@ -33,7 +81,7 @@ class AriCondition {
 
         //3 通知
         this.notifyAll();
-    }
+    }*/
 }
 
 /**
@@ -51,6 +99,8 @@ class AriCondition {
  * 虚假唤醒
  * 因为if只会执行一次，执行完会接着向下执行if（）外边的
  * 而while不会，直到条件满足才会向下执行while（）外边的
+ * <p>
+ * 知识小总结=多线程编程套路+while判断+新版写法
  */
 public class ProdConsumerDemo4 {
     public static void main(String[] args) throws Exception {
@@ -75,7 +125,6 @@ public class ProdConsumerDemo4 {
                 }
             }
         }, "B").start();
-
         new Thread(() -> {
             for (int i = 0; i <= 10; i++) {
                 try {
