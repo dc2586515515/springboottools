@@ -11,7 +11,7 @@ class AriCondition {
     private Condition condition = lock.newCondition();
 
     // ReentrantLock版
-    public synchronized void increment() throws Exception {
+    public  void increment() throws Exception {
         lock.lock();
         try {
             //1 判断
